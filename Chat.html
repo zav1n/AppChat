@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="fonts/aside/iconfont.css" rel="stylesheet" />
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<style>
+		.mui-bar-nav
+		{
+			background: linear-gradient(90deg,#4e8cfd,#39b8fd);
+		}
+		.mui-table-view .mui-media-object
+		{
+			border-radius: 50%;width: 40px;
+		}
+		.list-time
+		{
+			color: #B6B6B6;
+			font-size: 13px;
+		}
+		.aside_head_title
+		{
+			top: 90px;
+			left: 25px;
+		}
+		.icon-taiyang,.moon
+		{
+			font-size: 10px;
+			color: #FFFF00;
+		}
+		.asideicon
+		{
+			font-weight: bold;
+			font-size: 25px;
+		}
+		.mui-media-body
+		{
+			color: #000000;
+		}
+		.font-af
+		{
+			font-size: 1px;
+			margin-left:25px;
+		}
+	</style>
+
+<div class=" mui-off-canvas-wrap mui-draggable">
+
+<!--大中间，需要放头中低-->
+	<div class="mui-inner-wrap">
+<!--左滑菜单-->
+		<aside class="mui-off-canvas-left" style="background: #FFFFFF;position: absolute;">
+			
+			<div class="aside_head" style="width: 100%;height: 33%;position: relative;background: url(images/qq_head.jpg);" >
+				<div class="mui-icon" style="position: relative;width: 25px;height: 25px;left: 220px;top: 25px;">
+					<a href="#">
+					<img src="qq_images/erweima.png" style="width: 25px;height: 25;"/>
+					</a>
+				</div>
+				<div class="aside_head_title" style="top: 103px; height: 50%;width: 50%;position: relative;">
+					<div style="position: relative;width: 100%;height: 33%;">
+						<img src="qq_images/1.png"style="border-radius: 50%;width: 35px;"/>
+						<span class="mui-media-body" style="text-align: center;font-size: 15px;">苏泽锋</span>
+					</div>
+					<div style="position: relative;width: 100%;height: 18%;">
+					<p class="mui-icon iconfont icon-taiyang "></p>
+					<p class="mui-icon iconfont icon-taiyang "></p>
+					<p class="mui-icon iconfont icon-yejian1-copy moon "></p>
+					</div>
+					<p style="font-size: 13px;color: #E7E1CD;">编辑个性签名</p>
+				</div>
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">
+						<span class="mui-icon iconfont icon-huiyuantequan asideicon"></span>
+						<span>了解会员特权</span>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a href="#">
+						<span class="mui-icon iconfont icon-qianbao asideicon"></span>
+						<span>QQ钱包</span>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a href="#">
+						<span class="mui-icon iconfont icon-gexing asideicon"></span>
+						<span>个性装扮</span>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a href="#">
+						<span class="mui-icon iconfont icon-iconfont0303 asideicon"></span>
+						<span>我的收藏</span>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a href="#">
+						<span class="mui-icon iconfont icon-iconfont19 asideicon"></span>
+						<span>我的相册</span>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a href="#">
+						<span class="mui-icon iconfont icon-wodewenjianjia asideicon"></span>
+						<span>我的文件</span>
+					</a>
+				</li>
+				
+			</ul>
+			<!--侧滑底部-->
+			<nav class="mui-bar mui-bar-tab as-foot" style="background: #FFFFFF; ">
+				
+				<div class="mui-row">
+					<div class="mui-col-xs-4">
+						<a class="mui-table-item"></a>
+						<span class="mui-icon">
+							<span class="mui-tab-label"></span>
+						</span>
+					</div>
+					
+					<div class="mui-col-xs-4">
+						<a class="mui-table-item"></a>
+						<span class="mui-icon">
+							<span class="mui-tab-label"></span>
+						</span>
+					</div>
+					
+					<div class="mui-col-xs-4">
+						<a class="mui-table-item"></a>
+						<span class="mui-icon">
+							<span class="mui-tab-label" style="font-size: 35px;">30°</span>
+						</span>
+					</div>
+					
+					<div class="mui-col-xs-4">
+						<a class="mui-table-item "></a>
+						<span class="mui-icon iconfont icon-shezhi">
+							<span class="mui-tab-label">设置</span>
+						</span>
+					</div>
+					
+					<div class="mui-col-xs-4">
+						<a class="mui-table-item "></a>
+						<span class="mui-icon iconfont icon-yejian1-copy">
+							<span class="mui-tab-label">夜间</span>
+						</span>
+					</div>
+					
+					<div class="mui-col-xs-4">
+						<a class="mui-table-item"></a>
+						<span class="mui-tab-label mui-icon">广州市</span>
+					</div>
+					
+				</div>
+			</nav>
+			
+		</aside>
+		<!--左滑实现主内容遮罩效果-->
+		<div class="mui-off-canvas-backdrop"></div>
+<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-pull-left" >
+				<img src="qq_images/7.png" style="border-radius: 50%;width: 35px; margin-top: 5px;" />
+			</a>
+			<!--<a class="mui-icon mui-icon-bars mui-pull-right"></a>-->
+			<span class="mui-icon mui-icon-plusempty mui-pull-right"style="color: #FFFFFF;font-size: 35px; line-height: 23px;"></span>
+			<h1 class="mui-title" style="color: #FFFFFF;">消息</h1>
+		</header>
+<!--中间-->
+		<div class="mui-content mui-scroll-wrapper" id="content-scroll">
+			<!--中间的中间内容-->
+			<div class="mui-scroll"><!--上下滚动列表-->
+	
+				<div class="mui-input-row mui-search"><!--搜索栏-->
+					<input type="search" class="mui-input-clear" placeholder="搜索" />
+				</div>
+
+				<ul class="mui-table-view"><!--中间列表-->
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle" >
+							<a href="#">
+								<div class="mui-media-body">
+									<img src="qq_images/2.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">20:19</span>
+									一号跑龙套
+									<p>[/滑稽].............
+										<span class="mui-badge mui-badge-blue mui-pull-right">99+</span>
+									</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+									<img src="qq_images/3.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">18:12</span>
+									二号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+									<img src="qq_images/4.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+									<img src="qq_images/5.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+									<img src="qq_images/6.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+								<img src="qq_images/7.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+								<img src="qq_images/8.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+								<img src="qq_images/9.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+								<img src="qq_images/4.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+								<img src="qq_images/1.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+								<img src="qq_images/6.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<div href="#" class="mui-btn mui-btn-red delete">删除</div>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="#">
+								<div class="mui-media-body">
+								<img src="qq_images/2.png" class="mui-pull-left mui-media-object" />
+									<span class="mui-pull-right list-time">昨天</span>
+									三号跑龙套
+									<p>[/滑稽].............</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+				</ul>
+				
+			</div><!--<div class="mui-scroll">上下滚动列表-->
+
+		</div>
+<!--底部-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-chatbubble mui-active">
+					<span class="mui-badge">10</span>
+				</span>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">联系人</span>
+			</a>
+			
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-star"></span>
+				<span class="mui-tab-label">动态</span>
+			</a>
+		</nav>
+	</div>
+</div>
+
+</body>
+
+<script>
+	mui('#content-scroll').scroll(
+		{
+//		scrollY: true,
+//		scrollX: true,
+		deceleration:0.0009,
+		indicators: true,
+//		startX: 0,
+//		startY: 0,
+//		bounce: true,
+		}
+	);
+	
+	mui(".mui-table-view").on("tap",".delete",function(){
+		var a=this;
+		mui.confirm("是否删除？",function(item){
+			if(item.index==1)
+			{
+				delelemt=a.parentNode.parentNode;
+				if(delelemt.parentNode)
+				{
+					delelemt.parentNode.removeChild(delelemt);
+				}
+			}
+	});
+});
+</script>
+</html>
